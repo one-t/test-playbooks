@@ -9,3 +9,4 @@
         state: file
         suffix: temp
       with_sequence: 'count={{ num_files }}'
+      async: 2000000
