@@ -1,0 +1,11 @@
+---
+
+- hosts: all
+  gather_facts: false
+  vars:
+    num_files: 50
+  tasks:
+    - tempfile:
+        state: file
+        suffix: temp
+      with_sequence: 'count={{ num_files }}'
